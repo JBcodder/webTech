@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            background: #000000;
+        }
+        .container{
+            margin: auto;
+            display: flex;
+            gap: 8px;
+        }
+        .login-form{
+            color: #ff5800;
+            margin: auto;
+            border-radius: 2px;
+            border: 1px solid;
+            height: 675px;
+            display: flex;
+        }
+        .form-text{
+            width: 40%;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0n0b14U7FVZF-_2FmGEOfbzdkRzsaVgsXdg&s') no-repeat;
+            background-color: #2874f0;
+            background-position: center 85%;
+            color: #afff;
+            padding: 40px 33px;
+            font-size: 15px;
+        }
+        .header-text{
+            font-size: 28px;
+            font-weight: 5000;
+        }
+        .sub-text{
+            margin-top: 16px;
+            line-height: 1.5;
+            color: #dbdbdb;
+            font-size: 18px;
+        }
+        .main-form{
+            width: 60%;
+            padding: 56px 35px 16px;
+            background-color: #fff;
+            position: relative;
+        }
+        .input-field {
+            position: relative;
+            margin-bottom: 34px;
+        }
+        input{
+            padding: 8px 10px 10px 0;
+            width: 100%;
+            color: #000;
+            background: #fff;
+            border: none;
+            border-bottom: 1px solid #e0e0e0e0;
+        }
+        .floating-label{
+            color: #878787;
+            font-weight: 400;
+            position: absolute;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+        }
+        input:focus + .floating-label 
+        input:not(:placeholder-shown) + .floating-label{
+            transform: translateY(-10px);
+            font-size: 12.8px;
+        }
+        input:focus, input:not(:placeholder-shown){
+            border-bottom: 1px solid #2874f0;
+        }
+        .tc-text {
+            color: #878787;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        a {
+            color: #2874f0;
+        }
+        .btn_otp{
+            background: #fb641b;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            width: 100%;
+            height: 48px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 16px;
+            cursor: pointer;
+
+        }
+        .create-account{
+            position: absolute;
+            bottom: 32px;
+            left: 0;
+            right: 0;
+            text-align:center;
+            color: #2874f0;
+            font-weight: 500;
+        }
+        .close-icon{
+            position: relative;
+            cursor: pointer;
+            font-size: 32px;
+            line-height: 1;
+            color:#afff;;
+            top: -5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <div class="form-text">
+                <span class="header-text">Login</span>
+                <p>Get Access to your Order , Wishlist and  Recomendations</p>
+            </div>
+            <div class="main-form">
+                <form action="">
+                    <div class="input-field">
+                        <input type="text" placeholder="" required>
+                        <label for="" class="floating-label">Enter Email/Mobile Number</label>
+
+                    </div>
+                    <div class="tc-text">
+                        By continuong, you agree to Flipkarts
+                        <a href="/">Terms of User</a> and
+                        <a href="/">Privacy  Policy</a>.
+                    </div>
+                    <button  type="sunbmit" class="btn_otp">Request OTP</button>
+                </form>
+                <div class="create-account">
+                    New to Flipkarts? <a href="/">Create an account</a>  
+                </div>
+            </div>
+        </div>
+        <div class="btn-close">
+            <span class="close-icon">&#x2715;</span>
+        </div>
+
+    </div>
+    
+</body>
+</html>
